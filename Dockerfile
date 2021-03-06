@@ -7,8 +7,8 @@ WORKDIR /home/node
 
 COPY . /home/node
 
-RUN npm ci \
-    && npm run build
+RUN yarn install --frozen-lockfile \
+    && yarn build
 
 # ---
 
@@ -20,8 +20,9 @@ USER node
 WORKDIR /home/node
 
 COPY --from=builder /home/node/package*.json /home/node/
+COPY --from=builder /home/node/yarn.lock /home/node/
 COPY --from=builder /home/node/dist/ /home/node/dist/
 
-RUN npm ci
+RUN yarn install --frozen-lockfile
 
 CMD ["node", "dist/server.js"]
