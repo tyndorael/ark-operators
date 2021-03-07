@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-configmap
+  namespace: {{ .Values.namespace }}
+data:
+  msg1: {{ template "lowertrunc" . }}
+  msg2: {{ .Values.msg2 | lower | trunc 5 | quote}}
+  msg3: {{ .Values.msg3 }}
+  

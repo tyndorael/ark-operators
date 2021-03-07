@@ -1,0 +1,18 @@
+msg1: Hello World
+msg2: From
+msg3: Tyndorael
+
+namespace: arknights
+
+replicaCount: 1
+
+image:
+  repository: nginx
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: ""
+
+service:
+  internalPort: 80
+
+resources: {}
