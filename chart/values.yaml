@@ -7,12 +7,14 @@ namespace: arknights
 replicaCount: 1
 
 image:
-  repository: nginx
-  pullPolicy: IfNotPresent
+  repository: us.gcr.io/tynsoft/ark-operators
+  pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
 
 service:
-  internalPort: 80
+  internalPort: 3000
+
+imagePullSecrets: gcr-json-key
 
 resources: {}
