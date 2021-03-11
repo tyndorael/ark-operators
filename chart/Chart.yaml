@@ -1,5 +1,5 @@
 apiVersion: v2
-name: "ark-operators"
+name: "chart"
 description: "A helm chart for Arknights Operators Microservice"
 version: 0.1.0
 icon: https://someimage

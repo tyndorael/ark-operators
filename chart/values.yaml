@@ -1,7 +1,3 @@
-msg1: Hello World
-msg2: From
-msg3: Tyndorael
-
 namespace: arknights
 
 replicaCount: 1
@@ -16,5 +12,7 @@ service:
   internalPort: 3000
 
 imagePullSecrets: gcr-json-key
+
+test: Hello
 
 resources: {}
