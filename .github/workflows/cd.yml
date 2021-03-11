@@ -19,7 +19,7 @@ jobs:
       with:
         version: '${{ github.sha }}'
         chart: 'chart'
-        release: 'ark-operators-release'
+        release: 'ark-operators'
         namespace: '${{ secrets.NAMESPACE }}'
       env:
         KUBECONFIG_FILE: '${{ secrets.KUBECONFIG }}'
