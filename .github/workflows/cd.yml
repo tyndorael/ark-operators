@@ -15,7 +15,7 @@ jobs:
     - name: 'Deploy'
       # Parameters are pulled directly from the GitHub deployment event so the
       # configuration for the job here is very minimal.
-      uses: 'deliverybot/helm@master'
+      uses: 'deliverybot/helm3@master'
       with:
         version: '${{ github.sha }}'
         chart: 'chart'
