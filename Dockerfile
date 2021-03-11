@@ -25,4 +25,4 @@ COPY --from=builder /home/node/dist/ /home/node/dist/
 
 RUN yarn install --frozen-lockfile
 
-CMD ["node", "dist/server.js"]
+CMD ["node", "dist/main.js"]
